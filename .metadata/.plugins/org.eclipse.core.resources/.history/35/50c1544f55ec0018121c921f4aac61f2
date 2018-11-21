@@ -1,0 +1,6 @@
+package com.br.loja.dao;
+
+public interface UsuarioDao {
+
+	public boolean logar();
+}

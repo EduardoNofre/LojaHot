@@ -1,0 +1,30 @@
+/**
+ * 
+ */
+package com.br.loja.daoImpl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.br.loja.dao.ProdutoDao;
+import com.br.loja.entity.Produto;
+import com.br.loja.repository.ProdutoRepository;
+
+/**
+ * @author eduardo.sa
+ *
+ */
+public class ProdutoDaoImpl implements ProdutoDao{
+	
+	@Autowired
+	private ProdutoRepository produtoRepository;
+
+	@Transactional(readOnly = true)
+	public List<Produto> getProdutos() {
+				
+		return (List<Produto>) produtoRepository.findAll();
+		
+	}
+}

@@ -1,0 +1,30 @@
+package com.br.jedi.login.view;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.view.ViewScoped;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+@ManagedBean
+@ViewScoped
+public class LoginView {
+
+//	@Autowired
+//	private UsuarioServices usuarioServices;
+//
+//	public Usuario usuario = new Usuario();
+//
+//	public Usuario getUsuario() {
+//		return usuario;
+//	}
+//
+//	public void setUsuario(Usuario usuario) {
+//		this.usuario = usuario;
+//	}
+//
+//	public void login() {
+//
+//		usuarioServices.login(usuario);
+//	}
+}

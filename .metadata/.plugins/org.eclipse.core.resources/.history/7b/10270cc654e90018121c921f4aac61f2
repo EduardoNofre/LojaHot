@@ -1,0 +1,26 @@
+/**
+ * 
+ */
+package com.br.loja.serviceImpl;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.br.loja.entity.Produto;
+import com.br.loja.service.ProdutoService;
+
+/**
+ * @author eduardo.sa
+ *
+ */
+@Service
+public class ProdutoServiceImpl implements ProdutoService{
+	
+	
+	public List<Produto> buscaProdutos() {
+
+		return null;
+	}
+
+}

@@ -1,0 +1,55 @@
+/**
+ * 
+ */
+package com.br.loja.view;
+
+import java.util.List;
+
+import javax.annotation.ManagedBean;
+import javax.annotation.PostConstruct;
+import javax.faces.bean.ViewScoped;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import com.br.loja.entity.Produto;
+import com.br.loja.service.ProdutoService;
+
+/**
+ * @author eduardo.sa
+ *
+ */
+@Controller
+@ManagedBean
+@ViewScoped
+public class ProdutoView {
+
+	private List<Produto> listaProdutos;
+
+	private Produto selectedProduto;
+
+	@Autowired
+	private ProdutoService produtoService;
+
+	@PostConstruct
+	public void init() {
+		listaProdutos = produtoService.buscaProdutos();
+	}
+
+	public List<Produto> getListaProdutos() {
+		return listaProdutos;
+	}
+
+	public void setListaProdutos(List<Produto> listaProdutos) {
+		this.listaProdutos = listaProdutos;
+	}
+
+	public ProdutoService getProdutoService() {
+		return produtoService;
+	}
+
+	public void setProdutoService(ProdutoService produtoService) {
+		this.produtoService = produtoService;
+	}
+
+}

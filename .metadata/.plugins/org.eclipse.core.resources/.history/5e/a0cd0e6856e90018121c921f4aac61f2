@@ -1,0 +1,8 @@
+package com.br.loja.daoImpl;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class UsuarioDaoImpl {
+
+}

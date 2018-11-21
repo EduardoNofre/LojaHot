@@ -1,0 +1,12 @@
+package com.br.loja.service;
+
+import java.util.List;
+
+import com.br.loja.entity.Produto;
+
+
+
+public interface ProdutoService {
+
+	public List<Produto> buscaProdutos();
+}

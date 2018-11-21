@@ -1,0 +1,46 @@
+/**
+ * 
+ */
+package com.br.loja.view;
+
+import java.util.List;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.view.ViewScoped;
+
+import org.springframework.stereotype.Controller;
+
+/**
+ * @author eduardo.sa
+ *
+ */
+@Controller
+@ManagedBean
+@ViewScoped
+public class ProdutoView {
+
+	private List<Produto> listaProdutos;
+
+	private Produto selectedProduto;
+
+	@Autowired
+	private ProdutoService produtoService;
+
+
+	public List<Produto> getListaProdutos() {
+		return listaProdutos;
+	}
+
+	public void setListaProdutos(List<Produto> listaProdutos) {
+		this.listaProdutos = listaProdutos;
+	}
+
+	public ProdutoService getProdutoService() {
+		return produtoService;
+	}
+
+	public void setProdutoService(ProdutoService produtoService) {
+		this.produtoService = produtoService;
+	}
+
+}

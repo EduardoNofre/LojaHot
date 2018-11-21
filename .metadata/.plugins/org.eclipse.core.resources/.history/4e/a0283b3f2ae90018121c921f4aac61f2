@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <f:facet name="first">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+            <meta name="apple-mobile-web-app-capable" content="yes" />
+        </f:facet>
+        <title>Loja Afiliado</title>
+        <h:outputScript name="js/ripple.js" library="ultima-layout" />
+        <h:outputScript name="js/layout.js" library="ultima-layout" />
+    </h:head>
+
+    <h:body styleClass="login-body">
+    
+    <h:form action="${request.contextPath}/appLogin" method="POST">
+    
+        <div class="card login-panel ui-fluid">
+            <div class="ui-g">
+                <div class="ui-g-12">
+                    <p:graphicImage name="images/logo-vader.png" library="ultima-layout" />
+                </div>
+                <div class="ui-g-12">
+                
+					<h:outputLabel styleClass="md-inputfield" value="Enter UserName:" />
+					<input type="text" name="app_username" styleClass="md-inputfield"/>
+					
+                </div>
+                <div class="ui-g-12">
+                
+                <h:outputLabel value="Enter Password:" />
+				<input type="password" name="app_password" styleClass="md-inputfield"/> <br/><br/>			
+				<input type="submit" value="Login"/>
+				<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+				
+                </div>
+                <div class="ui-g-12">
+                    <p:commandButton value="Login" icon="ui-icon-person" action="#{loginView.login}" ajax="false"/>
+                    <p:commandButton value="Esqueci a senha" icon="ui-icon-help" styleClass="secondary"/>
+                </div>
+            </div>
+        </div>
+        <div class="login-footer">Loja Afiliado</div>
+        
+        <h:outputStylesheet name="css/ripple.css" library="ultima-layout" />
+        <h:outputStylesheet name="css/layout-#{guestPreferences.theme}.css" library="ultima-layout" />
+       </h:form>
+    </h:body>
+
+</html>
